@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  
+    <title>Coder</title>
+    <style type="text/css">
+        body { 
+       margin:0px;
+       padding:0px;
+
+       background-image: url(https://clipart-db.ru/file_content/rastr/background_065.jpg);
+
+        font-family: 'Lato',sand-serif;
+        width:100%;
+
+        }
+        
+        .Inf{
+        
+        width: 980px;
+       
+        }
+        textarea {
+            font-weight:bolder;
+        font-size:20px;
+}
+  textarea.oup {
+position:absolute;
+margin-left: 495px;
+margin-top: 100px;
+background: black;
+color: blanchedalmond;
+resize: none;
+ }
+textarea.inp {
+position: relative;
+text-align: left;
+margin-top: 100px;
+color: white;
+resize: none;
+background: black;
+margin-left: 200px;
+}
+textarea.inp_d {
+position: relative;
+text-align: left;
+margin-top: 100px;
+color: white;
+resize: none;
+background: black;
+margin-left: 200px;
+}
+textarea.oup_d {
+position:absolute;
+margin-left: 495px;
+margin-top: 100px;
+background: black;
+color: blanchedalmond;
+resize: none;
+ }
+p {
+position: relative;
+margin-left: 800px;}
+
+
+form
+{
+
+color:red;
+
+}
+.styled {
+    border: 0;
+    line-height: 2.5;
+    padding: 0 20px;
+    font-size: 1rem;
+
+    color: #fff;
+    margin-left: 60px;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 10px;
+    background-color: rgba(220, 0, 0, 1);
+    background-image: linear-gradient(to top left,
+                                      rgba(0, 0, 0, .2),
+                                      rgba(0, 0, 0, .2) 30%,
+                                      rgba(0, 0, 0, 0));
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+                inset -2px -2px 3px rgba(0, 0, 0, .6);
+                position: absolute;
+                margin-top: 267px;
+}
+
+.styled:hover {
+    background-color: rgba(255, 0, 0, 1);
+}
+
+.styled:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+                inset 2px 2px 3px rgba(0, 0, 0, .6);
+}
+.XXX { position: absolute;
+    border: 0;
+    line-height: 2.5;
+    margin-top: 267px;
+    margin-left: 300px;
+    padding: 0 20px;
+    font-size: 1rem;
+  
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 10px;
+    background-color: rgba(220, 0, 0, 1);
+    background-image: linear-gradient(to top left,
+                                      rgba(0, 0, 0, .2),
+                                      rgba(0, 0, 0, .2) 30%,
+                                      rgba(0, 0, 0, 0));
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+                inset -2px -2px 3px rgba(0, 0, 0, .6);
+               
+}
+
+.XXX:hover {
+    background-color: rgba(255, 0, 0, 1);
+}
+
+.XXX:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+                inset 2px 2px 3px rgba(0, 0, 0, .6);
+}
+
+
+
+        </style>
+
+</head>
+<body>
+<div class="Inf">
+    <textarea name ="inp" cols ="45"  rows="7" class="inp"></textarea > 
+    <textarea disabled name="oup" cols ="50"  rows="7" class="oup" id="bbs" ></textarea>
+
+    <button onclick ="reser()" class="XXX">Очистить</button>
+       <button onclick="submitText()" class="styled">Зашифровать данные</button>;
+       
+</div>
+<div class="Inf">
+    <textarea name ="inp_d" cols ="45"  rows="7" class="inp_d"></textarea > 
+    <textarea disabled name="oup_d" cols ="50"  rows="7" class="oup_d" id="bbs_d" ></textarea>
+
+    <button onclick ="ggwp()" class="XXX">Очистить</button>
+       <button onclick="submitText_d()" class="styled">Разшифровать данные</button>;
+       
+</div>
+
+
+
+
+
+
+
+
+    <script>
+        alert("Вводити тільки українські букви з нижнім регістром, та без (, . = ; :) і так далі");
+       let m = document.querySelector('.inp_d');
+     let v = document.querySelector('.inp');
+     var n=[];
+     var s= [];
+     function reser(){
+     v.value='';
+
+document.getElementById('bbs').value='';
+}
+function ggwp(){
+     m.value='';
+
+document.getElementById('bbs_d').value='';
+}
+        
+        function submitText(){
+            var sum='';
+            for(i=0;i<v.value.length;i++){
+   switch(v.value[i]){
+case "а" :s[i]="000001";break;
+case "б" :s[i]="000010";break;
+case "в" :s[i]="000011";break;
+case "г" :s[i]="000100";break;
+case "ґ" :s[i]="000101";break;
+case "д" :s[i]="000110";break;
+case "е" :s[i]="000111";break;
+case "є" :s[i]="001000";break;
+case "ж" :s[i]="001001";break;
+case "з" :s[i]="001010";break;
+case "и" :s[i]="001011";break; 
+case "і" :s[i]="001100";break;
+case "ї" :s[i]="001101";break;
+case "й" :s[i]="001110";break;
+case "к" :s[i]="001111";break;
+case "л" :s[i]="010000";break;
+case "м" :s[i]="010001";break;
+case "н" :s[i]="010010";break;
+case "о" :s[i]="010011";break;
+case "п" :s[i]="010100";break;
+case "р" :s[i]="010101";break;
+case "с" :s[i]="010110";break;
+case "т" :s[i]="010111";break;
+case "у" :s[i]="011000";break;
+case "ф" :s[i]="011001";break;
+case "х" :s[i]="011010";break;
+case "ц" :s[i]="011011";break;
+case "ч" :s[i]="011100";break;
+case "ш" :s[i]="011101";break;
+case "щ" :s[i]="011110";break;
+case "ь" :s[i]="011111";break;
+case "ю" :s[i]="100000";break;
+case "я" :s[i]="100001";break;
+case " " :s[i]="Probel";break;
+    } 
+    sum=sum+s[i]+'-';
+    }     
+    console.log(sum)
+    document.getElementById('bbs').value = sum.substr(0,sum.length-1);
+ }
+ var i=0;
+    function submitText_d(){
+        for(var j=0; j<m.value.length/6;j++){
+            
+        var k=m.value.split('-', i+6);
+        console.log(k);
+        i=i+6;
+        }
+        var sum_d='';
+       for(var f=0; f<k.length;f++){
+     
+     console.log(k.length);
+     console.log()
+switch(k[f]){
+case "000001" :n[f]="а";break;
+case "000010" :n[f]="б";break;
+case "000011" :n[f]="в";break;
+case "000100" :n[f]="г";break;
+case "000101" :n[f]="ґ";break;
+case "000110" :n[f]="д";break;
+case "000111" :n[f]="е";break;
+case "001000" :n[f]="є";break;
+case "001001" :n[f]="ж";break;
+case "001010" :n[f]="з";break;
+case "001011" :n[f]="и";break; 
+case "001100" :n[f]="і";break;
+case "001101" :n[f]="ї";break;
+case "001110" :n[f]="й";break;
+case "001111" :n[f]="к";break;
+case "010000" :n[f]="л";break;
+case "010001" :n[f]="м";break;
+case "010010" :n[f]="н";break;
+case "010011" :n[f]="о";break;
+case "010100" :n[f]="п";break;
+case "010101" :n[f]="р";break;
+case "010110" :n[f]="с";break;
+case "010111" :n[f]="т";break;
+case "011000" :n[f]="у";break;
+case "011001" :n[f]="ф";break;
+case "011010" :n[f]="х";break;
+case "011011" :n[f]="ц";break;
+case "011100" :n[f]="ч";break;
+case "011101" :n[f]="ш";break;
+case "011110" :n[f]="щ";break;
+case "011111" :n[f]="ь";break;
+case "100000" :n[f]="ю";break;
+case "100001" :n[f]="я";break;
+case "Probel" :n[f]=" ";break;
+console.log(n[f]);
+
+    } 
+    sum_d=sum_d+n[f];
+        console.log(sum_d);
+       }
+
+    document.getElementById('bbs_d').value = sum_d;
+    }
+    
+            
+    
+
+    </script> 
+    
+</body>
+</html>
